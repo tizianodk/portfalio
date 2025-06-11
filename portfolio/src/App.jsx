@@ -168,24 +168,23 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-black">
             {portfolioData.name}
           </h1>
-          <p className="text-xl md:text-2xl mb-4 opacity-90">
+          <p className="text-xl md:text-2xl mb-4 opacity-90 text-black">
             {portfolioData.title}
           </p>
-          <p className="text-lg mb-8 opacity-80">
+          <p className="text-lg mb-8 opacity-80 text-black">
             {portfolioData.description}
           </p>
           <div className="flex justify-center space-x-6 mb-8">
-            <a href="https://github.com/tizianodk" className="text-white hover:text-blue-200 transition-colors">
-              <Github className="w-8 h-8" 
-              />
+            <a href="https://github.com/tizianodk" className="text-black hover:text-blue-200 transition-colors">
+              <Github className="w-8 h-8" />
             </a>
-            <a href="https://linkedin.com/in/tiziano-maceda" className="text-white hover:text-blue-200 transition-colors">
+            <a href="https://linkedin.com/in/tiziano-maceda" className="text-black hover:text-blue-200 transition-colors">
               <Linkedin className="w-8 h-8" />
             </a>
-            <a onClick={() => scrollToSection('contact')} className="text-white hover:text-blue-200 transition-colors">
+            <a onClick={() => scrollToSection('contact')} className="text-black hover:text-blue-200 transition-colors">
               <Mail className="w-8 h-8" />
             </a>
           </div>
