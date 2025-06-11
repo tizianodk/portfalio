@@ -66,14 +66,6 @@ const Portfolio = () => {
         tech: ["React", "Express", "MongoDB"],
         github: "https://github.com/tizianodk/elParador",
         demo: "#"
-      },
-      {
-        title: "App de Tareas",
-        description: "Aplicación de gestión de tareas con drag & drop, categorías y sincronización en tiempo real.",
-        image: "/proyecto3.jpg", 
-        tech: ["React", "Firebase", "Tailwind"],
-        github: "#",
-        demo: "#"
       }
     ]
   };
