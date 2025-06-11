@@ -127,7 +127,9 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500">
+
+"aaa"
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-black-600 to-green-500">
         <div className="text-center text-white px-4">
           {/* Foto de perfil */}
           <div className="mb-8 flex justify-center">
