@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Palette, Database, Globe } from 'lucide-react';
 import ContactForm from './componentes/contacto';
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
+AOS.init({
+    duration:1000,
+    once:false,
+});
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,7 +77,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" data-aos="fade-down" >
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +87,7 @@ const Portfolio = () => {
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8"  >
               {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                 <button
                   key={item}
@@ -138,7 +144,7 @@ const Portfolio = () => {
 
 
 
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-black-600 to-black-500">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 via-blue to-black" data-aos="fade-up">
 
 
 
@@ -147,7 +153,7 @@ const Portfolio = () => {
 
 
 
-        <div className="text-center text-white px-4">
+        <div className="text-center text-white px-4" data-aos="fade-down">
           {/* Foto de perfil */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
@@ -168,13 +174,13 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-black">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
             {portfolioData.name}
           </h1>
-          <p className="text-xl md:text-2xl mb-4 opacity-90 text-black">
+          <p className="text-xl md:text-2xl mb-4 opacity-90 text-white">
             {portfolioData.title}
           </p>
-          <p className="text-lg mb-8 opacity-80 text-black">
+          <p className="text-lg mb-8 opacity-80 text-white">
             {portfolioData.description}
           </p>
           <div className="flex justify-center space-x-6 mb-8">
@@ -198,7 +204,7 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white" data-aos="zoom-in-down">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Sobre mí</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -223,8 +229,15 @@ const Portfolio = () => {
                 className="w-64 h-64 rounded-2xl shadow-2xl object-cover"
               /> */}
               
+
+
+
+
+
+
+
               {/* Opción 2: Avatar estilizado (actual) */}
-              <div className="w-64 h-64 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
+              <div className="w-64 h-64 bg-gradient-to-br from-blue-500 via-blue to-black  rounded-2xl flex items-center justify-center text-white text-6xl font-bold shadow-2xl text-white">
                 {portfolioData.name.charAt(0)}
               </div>
             </div>
@@ -233,8 +246,8 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-20 bg-gray-50" >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="zoom-in-up">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Habilidades</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {portfolioData.skills.map((skill, index) => (
@@ -257,7 +270,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-white">
+      <section id="projects" className="py-20 bg-white" data-aos="zoom-in-right">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Proyectos</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -312,7 +325,7 @@ const Portfolio = () => {
                 </div>
                 
                 {/* Contenido de la card */}
-                <div className="p-6">
+                <div className="p-6" >
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
                       {project.title}
@@ -359,21 +372,21 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50">
+      <section id="contact" className="py-20 bg-gray-50" data-aos="zoom-in">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">¡Trabajemos juntos!</h2>
           <p className="text-xl text-gray-600 mb-12 text-center">
             ¿Tienes un proyecto en mente? Me encantaría escuchar sobre él.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12" data-aos="fade-down-left" >
             {/* Información de contacto */}
-            <div className="space-y-8">
+            <div className="space-y-8"  >
               <div>
                 <h3 className="text-2xl font-semibold mb-6 text-gray-800">Conectemos</h3>
                 <div className="space-y-4">
                   <a
-                    href="tizianomaceda24@gmail.com"
+                    href="mailto:tizianomaceda24@gmail.com"
                     className="flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow group"
                   >
                     <div className="bg-blue-100 p-3 rounded-full group-hover:bg-blue-200 transition-colors">
@@ -415,7 +428,7 @@ const Portfolio = () => {
             </div>
 
             {/* Formulario de contacto */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-down-left">
               <h3 className="text-2xl font-semibold mb-6 text-gray-800">Envíame un mensaje</h3>
               <ContactForm/>
             </div>
