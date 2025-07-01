@@ -5,7 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 AOS.init({
-    duration:1000,
+    duration:1200,
     once:false,
 });
 
@@ -56,11 +56,13 @@ const Portfolio = () => {
     projects: [
       {
         title: "Tienda Tecnológica",
-        description: "Aplicación de comercio electrónico completa con carrito de compras, autenticación y pasarela de pagos.",
+        description: "Plataforma de ecommerce moderna para productos tecnológicos. " +
+        "Cuenta con autenticación de usuarios, carrito de compras persistente, pasarela de pagos integrada con Stripe y panel de administración. " +
+        "Diseñada para ofrecer una experiencia de compra fluida, segura y responsive.",
         image: "/techZone.png", 
         tech: ["React", "Node.js", "MongoDB", "Stripe"],
-        github: "https://github.com/tizianodk/tienda-ecommerce",
-        demo: "#"
+        github: "https://github.com/tizianodk/ecommerce",
+        demo: "https://ecommerce-5yy8.vercel.app/"
       },
       {
         title: "Sistema Bar",
@@ -72,17 +74,27 @@ const Portfolio = () => {
         tech: ["React", "Express", "MongoDB"],
         github: "https://github.com/tizianodk/elParador",
         demo: "#"
+      },
+      {
+        title: "Hogar Santa Lucia",
+        description: "Sitio web institucional para un geriátrico con más de 35 años de trayectoria. " +
+        "Brinda información clara sobre los servicios, instalaciones y valores del hogar, con un diseño cálido y accesible. " +
+        "Incluye una sección de contacto y ubicación optimizada para facilitar la comunicación con familiares y cuidadores.",
+        image: "/logo_geriatrico.PNG",
+        tech: ["React"],
+        github: "https://github.com/tizianodk/hogar-santa-lucia",
+        demo: "https://hogar-santa-lucia.vercel.app/"
       }
     ]
   };
 
   return (
-    <div className="min-h-screen bg-gray-50" data-aos="fade-down" >
+    <div className="min-h-screen bg-gray-50"  data-aos="fade-down">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"  >
           <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold text-blue-600">
+            <div className="text-2xl font-bold text-blue-600" >
               {portfolioData.name.split(' ')[0]}
             </div>
             
@@ -287,8 +299,8 @@ const Portfolio = () => {
                         style={{borderRadius:"50%",marginLeft:"90px",marginTop:"15px"}}
                       />
                       {/* Overlay con botones */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-4 left-4 right-4 flex space-x-3">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos='fade-up'>
+                        <div className="absolute bottom-4 left-4 right-4 flex space-x-3" >
                           <a
                             href={project.github}
                             className="flex-1 bg-white/20 backdrop-blur-sm text-white py-2 px-4 rounded-lg text-center hover:bg-white/30 transition-colors flex items-center justify-center space-x-2"
