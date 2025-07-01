@@ -51,7 +51,7 @@ const Portfolio = () => {
       { name: "Frontend", icon: <Code className="w-8 h-8" />, techs: ["React", "JavaScript", "CSS3", "HTML5"] },
       { name: "Backend", icon: <Database className="w-8 h-8" />, techs: ["Node.js", "Express", "MongoDB"] },
       { name: "Diseño", icon: <Palette className="w-8 h-8" />, techs: ["Tailwind", "Bootstrap", "Responsive Design"] },
-      { name: "Herramientas", icon: <Globe className="w-8 h-8" />, techs: ["Git", "Vercel"] }
+      { name: "Herramientas", icon: <Globe className="w-8 h-8" />, techs: ["Git", "Vercel", 'Render'] }
     ],
     projects: [
       {
